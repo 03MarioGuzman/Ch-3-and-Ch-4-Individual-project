@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<Title> Forums </Title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="mainstyles.css">
+<script src= "modernizer.custom.65897.js"></script>
+</head>
+<div id="wrapper">
+<body>
+<header>
+<h1 style = "text-align:center;"> Welcome to the Forums</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="main.html">Main</a></li>
+    <li><a href="Forums.html">Form</a></li> 
+    <li><a href="about.html">About</a></li>
+  </ul>
+ 
+</nav>
+<main>
+<form>
+	<fieldset>
+	<label for = "fname">First Name:
+	</label><br>
+	<input type="text" id = "fname" name = "" ><br>
+	<label for ="lname">Last Name:</label><br>
+	<input type = "text" id ="lname" name = "" /><br><br>
+
+	<label for = "email">Email:</label><br>
+	<input type = "text" id = "email" name = ""  /><br><br>
+	<label for = "Age">Age: </label><br>
+	<input type = "number" id = "age"/><br>
+	<span id = "message"/><br>
+	<input type = "submit" value = "Submit"/>
+	</fieldset>
+</form>
+
+</main>
+<script>
+function validateAge{
+	var validity = false;
+	var ageMessage = "";
+	try{
+		if(age.value >= 1 && age.value <= 100){
+			throw "Please enter a age between 1 and 100.";
+		}
+	}
+		catch(message){
+			validity = false;
+			ageMessage = message;
+			age.value = "";
+		}
+		finally{
+			age = validity;
+			messageElement.innerHTML = ageMessage;
+			messageHeadElement.innerHTML = "";
+		}
+}
+		
+</script>
+</body>
+<footer>
+<h3>Here is our contact infomation</h3>
+<h4> Phone Number:(909)-785-5947 </h4>
+<h5>Copyright &copy; 2023 Mario Guzman</h5>
+</footer>
+</html>
